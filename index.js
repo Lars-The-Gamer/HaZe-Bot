@@ -40,11 +40,11 @@ bot.on("message", async message => {
 
     var prefix = botConfig.prefix;
 
-    var messageArray = messgae.content.split(" ");
+    var messageArray = message.content.split(" ");
 
     var command = messageArray[0];
 
-    var Arguments = messageArray.slice(1);
+    var arguments = messageArray.slice(1);
 
     if(command === `${prefix}hallo`){
 
