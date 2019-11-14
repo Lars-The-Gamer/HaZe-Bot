@@ -1,18 +1,18 @@
-const Discord = require('discord.js');
+const discord = require("discord.js");
+const botConfig = require("./botconfig.json");
 
-var client = new Discord.Client();
+const bot = new discord.Client();
 
-client.on ("ready", () => {
-    console.log ("Je bot is volledig opgestart");
+bot.on("ready", async () => {
 
-    client.user.setActivity ("HaZe!help");
+    console.log(`${bot.user.username} Je bot is volledig opgestart`);
+
 });
 
-const fs = require("fs");
-client.msgs = require ("./msgs.json");
 
-const prefix = "HaZe!";
-client.on ("message", (message) => {
+bot.login(process.env.token);
+
+bot.on ("message", (message) => {
 
     
         if (message.content.startsWith ("HaZe!accept")) {
@@ -35,5 +35,3 @@ client.on ("message", (message) => {
         
 
 });
-
-client.login (process.env.token);
