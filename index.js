@@ -44,7 +44,7 @@ bot.on("message", async message => {
 
     var command = messageArray[0];
 
-    var Arguments = messageArray.slice(1)
+    var Arguments = messageArray.slice(1);
 
     if(command === `${prefix}hallo`){
 
