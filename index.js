@@ -6,13 +6,13 @@ const fs = require("fs");
 const bot = new discord.Client();
 bot.commands = new discord.Collection();
 
-fs.readdir("./commands" , (err, files) => {
+fs.readdir("./commands/" , (err, files) => {
 
     if(err) console.log(err);
 
     var jsFiles = files.filter(f => f.split(".").pop() === "js");
 
-    if(jsFiles.lenght <=0) {
+    if(jsFiles.lenght <= 0) {
         console.log("Kon geen bestanden vinden");
         return;
     }
@@ -56,6 +56,6 @@ bot.on("message", async message => {
 
     var commands = bot.commands.get(command.slice(prefix.lenght));
 
-    if(commands) commands.run(bot, message, arguments);
+    if(commands) commands.run(bot,message, arguments);
 
 });
