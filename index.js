@@ -46,10 +46,9 @@ bot.on("message", async message => {
         var botIcon = bot.user.displayAvatarURL
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**Alle commands**")
+            .setDescription("**Alle commands** \n **HaZe!help** --> Om dit scherm te krijgen met alle commands \n **HaZe!leden** --> Om alle leden weer te geven die in de HaZe clan zitten" ")
             .setColor("#79ff00")
-            .setThumbnail(botIcon)
-            .addField("**HaZe!help** --> Om dit scherm te krijgen met alle commands \n **HaZe!leden** --> Om alle leden weer te geven die in de HaZe clan zitten");
+            .setThumbnail(botIcon);
 
         return message.channel.send(botEmbed);
 
