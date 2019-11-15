@@ -42,7 +42,7 @@ bot.on("message", async message => {
     if(command === `${prefix}ok`){
 
         var botEmbed = new discord.RichEmbed()
-        .setDescription("Iedereen die zich gisteren (11/11/2019) heeft geregistreerd voor de HaZe clan is nu lid! \n Er zijn een paar aanpassingen op jullie Discord! Veel plezier!")
+        .setDescription("Iedereen die zich gisteren (11/11/2019) heeft geregistreerd voor de HaZe clan is nu lid! Er zijn een paar aanpassingen op jullie Discord! Veel plezier!")
         .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
