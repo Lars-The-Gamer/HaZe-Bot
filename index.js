@@ -32,7 +32,7 @@ bot.on("message", async message => {
     if(command === `${prefix}accept`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("We zullen binnen de 24 uur controleren of je alle stappen hebt gedaan. Binnen de 24 uur krijg je een bericht of je wel of niet in de clan zit.")
+            .setDescription("We zullen binnen de 24 uur controleren of je alle stappen hebt gedaan. \n Binnen de 24 uur krijg je een bericht of je wel of niet in de clan zit.")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
