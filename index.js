@@ -43,7 +43,15 @@ bot.on("message", async message => {
 
     if(command === `${prefix}help`){
 
-        return message.channel.send("**COMMANDS** \n\n HaZe!help --> Om dit scherm te zien te krijgen \n HaZe!leden --> Om alle leden te zien te krijgen");
+        var botIcon = bot.user.displayAvatarURL
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("Alle commands")
+            .setColor("#79ff00")
+            .setThumbnail(botIcon)
+            .addField("Alle commands", message("Test"));
+
+        return message.channel.send(botEmbed);
 
     }
 
