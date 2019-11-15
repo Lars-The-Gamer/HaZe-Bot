@@ -1,8 +1,8 @@
 const discord = require("discord.js");
 
-module.exports.run = async(bot, message, arguments) => {
+module.exports.run = async (bot, message, arguments) => {
 
-    console.log("TEST")
+    console.log("TEST");
 
 }
 
