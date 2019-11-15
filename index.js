@@ -49,7 +49,7 @@ bot.on("message", async message => {
             .setDescription("Alle commands")
             .setColor("#79ff00")
             .setThumbnail(botIcon)
-            .addField("Alle commands", message("Test"));
+            .addField("Alle commands", bot.user.username);
 
         return message.channel.send(botEmbed);
 
