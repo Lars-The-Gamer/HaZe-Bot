@@ -62,7 +62,7 @@ bot.on("message", async message => {
     if(command === `${prefix}leden`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**HaZe LEDEN** \n\n**Leiders:** \n1. Lars Dobbelaere \n2. HaZe Looped \n3. HaZe Casper \n\n**Leden:** \n1. HaZe Lias \n 2. HaZe Lucas \n3. HaZe SAM MEY YT \n4. HaZe Woutty \n\n**Totaal:** \n7 leden")
+            .setDescription("**HaZe LEDEN** \n\n**Leiders:** \n1. Lars Dobbelaere \n2. HaZe Looped \n3. HaZe Casper \n\n**Leden:** \n1. HaZe Lias \n2. HaZe Lucas \n3. HaZe SAM MEY YT \n4. HaZe Woutty \n\n**Totaal:** \n7 leden")
             .setColor("#79ff00");
 
         return message.author.send(botEmbed);
