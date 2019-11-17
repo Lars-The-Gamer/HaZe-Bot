@@ -99,7 +99,17 @@ bot.on("message", async message => {
     if(message.content === `${prefix}createticket` && message.channel.id === '645738714596900952') {
         let guild = message.guild;
         guild.createChannel(`${message.author.username}-ticket` , {
-            type: 'text'
+            type: 'text',
+            permissionOverwrites: [
+                {
+                    allow: 'VIEW_CHANNEL',
+                    id: message.author.id
+                },
+                {
+                    deny: 'VIEW_CHANNEL',
+                    id: guild.id
+                }
+            ]
         });
     }
     else if(message.content.toLowerCase() === 'HaZe!closeticket') {
