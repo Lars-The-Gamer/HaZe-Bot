@@ -52,7 +52,7 @@ bot.on("message", async message => {
     if(command === `${prefix}help`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n\n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n\n**HaZe!pokecord --> Uitleg krijgen over hoe pokécord werkt**")
+            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n\n**HaZe!serverinfo** --> Info van de server weergeven \n\n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n\n**HaZe!pokecord --> Uitleg krijgen over hoe pokécord werkt**")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
@@ -78,5 +78,22 @@ bot.on("message", async message => {
         return message.author.send(botEmbed);
 
     }
+
+    if(command === `${prefix}serverinfo`){
+
+        var icon = message.guild.iconURL;
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("**Server info**")
+            .setColor("#79ff00")
+            .setThumbnail(icon)
+            .addField("Bot naam", boy.user.username)
+            .addField("Je bent de server gejoind op", message.member.joinedAt)
+            .addField("Server leden", message.guild.memberCount);
+
+        return message.channel.send(botEmbed);
+
+    }
+
 
 });
