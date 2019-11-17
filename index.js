@@ -32,7 +32,7 @@ bot.on("message", async message => {
     if(command === `${prefix}accept`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("We zullen binnen de 24 uur controleren of je alle stappen hebt gedaan. \n Binnen de 24 uur krijg je een bericht of je wel of niet in de clan zit.")
+            .setDescription("We zullen binnen de 24 uur controleren of je alle stappen hebt gedaan. \nBinnen de 24 uur krijg je een bericht of je wel of niet in de clan zit.")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
@@ -52,7 +52,7 @@ bot.on("message", async message => {
     if(command === `${prefix}help`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**ALLE COMMANDS** \n\n **HaZe!help** --> Om dit scherm te krijgen met alle commands \n **HaZe!leden** --> Zien wie er in de HaZe clan zit")
+            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n**HaZe!pokecord --> Uitleg krijgen over hoe pokécord werkt**")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
@@ -62,7 +62,7 @@ bot.on("message", async message => {
     if(command === `${prefix}leden`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**HaZe LEDEN** \n\n **Leiders:** \n 1. Lars Dobbelaere \n 2. HaZe Looped \n 3. HaZe Casper \n\n **Leden:** \n 1. HaZe Lias \n 2. HaZe Lucas \n 3. HaZe SAM MEY YT \n 4. HaZe Woutty \n\n **Totaal:** \n 7 leden")
+            .setDescription("**HaZe LEDEN** \n\n**Leiders:** \n1. Lars Dobbelaere \n2. HaZe Looped \n3. HaZe Casper \n\n**Leden:** \n1. HaZe Lias \n 2. HaZe Lucas \n3. HaZe SAM MEY YT \n4. HaZe Woutty \n\n**Totaal:** \n7 leden")
             .setColor("#79ff00");
 
         return message.author.send(botEmbed);
