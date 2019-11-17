@@ -126,7 +126,7 @@ bot.on("message", async message => {
             }).then(ch => {
                 console.log(ch.name + " is gemaakt");
                 userTickets.set(message.author.id, ch.id);
-                concole.log(userTickets);
+                console.log(userTickets);
             }).catch(err => console.log(err));
         }
     }
