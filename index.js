@@ -99,9 +99,10 @@ bot.on("message", async message => {
 
     if(message.author.bot) return;
     if(message.content === `${prefix}createticket` && message.channel.id === '645738714596900952') {
-        if(userTickets.has(message.author.id)) {
+        if(userTickets.has(message.author.id) || message.guild.channels.some(channel => channel.name.toLowerCase() === message.author.username + '-ticket')) {
             message.author.send("Je hebt al een ticket aangemaakt");
-        } else {
+        } 
+        else {
             let guild = message.guild;
             guild.createChannel(`${message.author.username}-ticket` , {
                 type: 'text',
