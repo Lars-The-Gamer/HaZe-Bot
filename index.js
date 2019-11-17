@@ -29,6 +29,8 @@ bot.on("message", async message => {
 
     var arguments = messageArray.slice(1);
 
+    var userTickets = new Map();
+
     if(command === `${prefix}accept`){
 
         var botEmbed = new discord.RichEmbed()
@@ -97,28 +99,36 @@ bot.on("message", async message => {
 
     if(message.author.bot) return;
     if(message.content === `${prefix}createticket` && message.channel.id === '645738714596900952') {
-        let guild = message.guild;
-        guild.createChannel(`${message.author.username}-ticket` , {
-            type: 'text',
-            permissionOverwrites: [
-                {
-                    allow: 'VIEW_CHANNEL',
-                    id: message.author.id
-                },
-                {
-                    deny: 'VIEW_CHANNEL',
-                    id: guild.id
-                },
-                {
-                    allow: 'VIEW_CHANNEL',
-                    id: '634842202673250324'
-                },
-                {
-                    allow: 'VIEW_CHANNEL',
-                    id: '634842319975088129'
-                }
-            ]
-        });
+        if(userTickets.has(message.author.id)) {
+            message.channel.send("Je hebt al een ticket aangemaakt");
+        } else {
+            let guild = message.guild;
+            guild.createChannel(`${message.author.username}-ticket` , {
+                type: 'text',
+                permissionOverwrites: [
+                    {
+                        allow: 'VIEW_CHANNEL',
+                        id: message.author.id
+                    },
+                    {
+                        deny: 'VIEW_CHANNEL',
+                        id: guild.id
+                    },
+                    {
+                        allow: 'VIEW_CHANNEL',
+                        id: '634842202673250324'
+                    },
+                    {
+                        allow: 'VIEW_CHANNEL',
+                        id: '634842319975088129'
+                    }
+                ]
+            }).then(ch => {
+                console.log(ch.name + " is gemaakt");
+                userTickets.set(message.author.id, ch.id);
+                concole.log(userTickets);
+            }).catch(err => console.log(err));
+        }
     }
     else if(message.content.toLowerCase() === 'HaZe!closeticket') {
 
