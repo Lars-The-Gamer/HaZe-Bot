@@ -87,7 +87,7 @@ bot.on("message", async message => {
             .setDescription("**Server info**")
             .setColor("#79ff00")
             .setThumbnail(icon)
-            .addField("Bot naam", boy.user.username)
+            .addField("Bot naam", bot.user.username)
             .addField("Je bent de server gejoind op", message.member.joinedAt)
             .addField("Server leden", message.guild.memberCount);
 
