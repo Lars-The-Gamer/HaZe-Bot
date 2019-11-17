@@ -95,5 +95,15 @@ bot.on("message", async message => {
 
     }
 
+    if(message.author.bot) return;
+    if(message.content.toLowerCase() === "HaZe!createticket" && message.channel.id === "645738714596900952") {
+        let guild = message.guild;
+        guild.createChannel(`${message.author.username}-ticket` , {
+            type: "text"
+        });
+    }
+    else if(message.content.toLowerCase() === "HaZe!closeticket") {
+
+    }
 
 });
