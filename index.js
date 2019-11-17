@@ -108,6 +108,14 @@ bot.on("message", async message => {
                 {
                     deny: 'VIEW_CHANNEL',
                     id: guild.id
+                },
+                {
+                    allow: 'VIEW_CHANNEL',
+                    id: '634842202673250324'
+                },
+                {
+                    allow: 'VIEW_CHANNEL',
+                    id: '634842319975088129'
                 }
             ]
         });
