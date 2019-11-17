@@ -81,7 +81,7 @@ bot.on("message", async message => {
 
     if(command === `${prefix}serverinfo`){
 
-        var icon = message.guild.iconURL;
+        var icon = message.guild.iconURL
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("**Server info**")
