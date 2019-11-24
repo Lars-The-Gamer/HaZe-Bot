@@ -97,7 +97,7 @@ bot.on("message", async message => {
 
     }
 
-    if(command === `${prefix}hulp`){
+    if(message.content.startsWith("Hallo")){
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("Goedendag! \nAls je hulp nodig hebt met Discord dan typ je 'HaZe!hulp'")
