@@ -29,7 +29,7 @@ bot.on("message", async message => {
 
     var arguments = messageArray.slice(1);
 
-    var userTickets = new Map();
+    
 
     if(command === `${prefix}accept`){
 
@@ -110,7 +110,7 @@ bot.on("message", async message => {
     if(command === `${prefix}hulp`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**HOE MUZIEK AFSPELEN OP DISCORD?** \n\nAls eerste ga je verbinding maken met 📞Els - Lars Bellen \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp nogmaals **r!pause** om het liedje terug te laten afspelen \nAls je wil stoppen met muziek te luisteren dan verbreek je de verbinding met 📞Els - Lars Bellen")
+            .setDescription("**HOE MUZIEK AFSPELEN OP DISCORD?** \n\nAls eerste ga je verbinding maken met 📞Els - Lars Bellen \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp **r!play** om het liedje te hervatten \nAls je wil stoppen met muziek te luisteren dan verbreek je de verbinding met 📞Els - Lars Bellen")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
@@ -118,6 +118,8 @@ bot.on("message", async message => {
     }
 
     if(command === `${prefix}kennismaking`){
+
+        var icon = message.guild.iconURL
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("Hey! \nIk ben je persoonlijke assistent! \nIk zal je helpen en info geven over Discord! \nZeg gerust eens hallo tegen mij!")
@@ -131,7 +133,7 @@ bot.on("message", async message => {
     if(command === `${prefix}CU1`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**UPDATE NOTES 24/11/2019** \n\n**Muziek** \nJe kunt nu muziek afspelen op Discord! \nAls eerste ga je verbinding maken met 📞Els - Lars Bellen \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren  \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp nogmaals **r!pause** om het liedje terug te laten afspelen \nAls je wil stoppen met muziek te luisteren dan verbreek je de verbinding met 📞Els - Lars Bellen")
+            .setDescription("**UPDATE NOTES 24/11/2019** \n\n**Muziek** \nJe kunt nu muziek afspelen op Discord! \nAls eerste ga je verbinding maken met 📞Els - Lars Bellen \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren  \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp **r!play** om het liedje te hervatten \nAls je wil stoppen met muziek te luisteren dan verbreek je de verbinding met 📞Els - Lars Bellen")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
