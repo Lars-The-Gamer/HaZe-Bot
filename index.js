@@ -97,15 +97,15 @@ bot.on("message", async message => {
 
     }
 
-    if(message.content.startsWith("Hallo")){
+    //if(message.content.startsWith("Hallo")){
 
-        var botEmbed = new discord.RichEmbed()
-            .setDescription("Goedendag! \nAls je hulp nodig hebt met Discord dan typ je **'HaZe!hulp'**")
-            .setColor("#79ff00");
+        //var botEmbed = new discord.RichEmbed()
+          //  .setDescription("Goedendag! \nAls je hulp nodig hebt met Discord dan typ je **'HaZe!hulp'**")
+          //  .setColor("#79ff00");
 
-        return message.channel.send(botEmbed);
+        //return message.channel.send(botEmbed);
 
-    } 
+    //} 
 
     if(command === `${prefix}hulp`){
 
@@ -117,18 +117,18 @@ bot.on("message", async message => {
 
     }
 
-    if(command === `${prefix}kennismaking`){
+    //if(command === `${prefix}kennismaking`){
 
-        var icon = message.guild.iconURL
+        //var icon = message.guild.iconURL
 
-        var botEmbed = new discord.RichEmbed()
-            .setDescription("Hey! \nIk ben je persoonlijke assistent! \nIk zal je helpen en info geven over Discord! \nZeg gerust eens hallo tegen mij!")
-            .setColor("#79ff00")
-            .setThumbnail(icon)
+        //var botEmbed = new discord.RichEmbed()
+           // .setDescription("Hey! \nIk ben je persoonlijke assistent! \nIk zal je helpen en info geven over Discord! \nZeg gerust eens hallo tegen mij!")
+           // .setColor("#79ff00")
+           // .setThumbnail(icon)
 
-        return message.channel.send(botEmbed);
+        //return message.channel.send(botEmbed);
 
-    }
+    //}
 
     if(command === `${prefix}CU1`){
 
