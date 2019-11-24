@@ -97,9 +97,15 @@ bot.on("message", async message => {
 
     }
 
-    if (message.content.startsWith("Hallo")) {
-        message.channel.send("Goedendag! \nAls je hulp nodig hebt met Discord dan typ je 'HaZe!hulp'");
-      }
+    if(command === `${prefix}hulp`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("Goedendag! \nAls je hulp nodig hebt met Discord dan typ je 'HaZe!hulp'")
+            .setColor("#79ff00");
+
+        return message.channel.send(botEmbed);
+
+    } 
 
     if(command === `${prefix}hulp`){
 
@@ -114,9 +120,9 @@ bot.on("message", async message => {
     if(command === `${prefix}Kennismaking`){
 
         var botEmbed = new discord.RichEmbed()
-        .setDescription("Hey! \nIk ben je persoonlijke assistent! \nIk zal je helpen en info geven over Discord! \nZeg gerust eens hallo tegen mij!")
-        .setColor("#79ff00")
-        .setThumbnail(icon);
+            .setDescription("Hey! \nIk ben je persoonlijke assistent! \nIk zal je helpen en info geven over Discord! \nZeg gerust eens hallo tegen mij!")
+            .setColor("#79ff00")
+            .setThumbnail(icon);
 
         return message.channel.send(botEmbed);
 
@@ -125,8 +131,8 @@ bot.on("message", async message => {
     if(command === `${prefix}CU 1`){
 
         var botEmbed = new discord.RichEmbed()
-        .setDescription("**UPDATE NOTES 24/11/2019** \n\n**Muziek** \nJe kunt nu muziek afspelen op Discord! \nAls eerste ga je verbinding maken met 📞Els - Lars Bellen \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren  \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp nogmaals **r!pause** om het liedje terug te laten afspelen \nAls je wil stoppen met muziek te luisteren dan verbreek je de verbinding met 📞Els - Lars Bellen")
-        .setColor("#79ff00");
+            .setDescription("**UPDATE NOTES 24/11/2019** \n\n**Muziek** \nJe kunt nu muziek afspelen op Discord! \nAls eerste ga je verbinding maken met 📞Els - Lars Bellen \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren  \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp nogmaals **r!pause** om het liedje terug te laten afspelen \nAls je wil stoppen met muziek te luisteren dan verbreek je de verbinding met 📞Els - Lars Bellen")
+            .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
 
