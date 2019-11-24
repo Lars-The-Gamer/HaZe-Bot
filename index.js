@@ -116,13 +116,12 @@ bot.on("message", async message => {
         return message.channel.send(botEmbed);
 
     }
-    
-    if(command === `${prefix}Kennismaking`){
+
+    if(command === `${prefix}kennismaking`){
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("Hey! \nIk ben je persoonlijke assistent! \nIk zal je helpen en info geven over Discord! \nZeg gerust eens hallo tegen mij!")
-            .setColor("#79ff00")
-            .setThumbnail(icon);
+            .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
 
@@ -137,6 +136,5 @@ bot.on("message", async message => {
         return message.channel.send(botEmbed);
 
     }
-    
 
 });
