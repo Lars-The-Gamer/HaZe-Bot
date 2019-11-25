@@ -140,4 +140,24 @@ bot.on("message", async message => {
 
     }
 
+    if(command === `${prefix}allreadylid`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("We zien dat je al lid bent. Je kunt niet nog eens lid worden. Als je de clan wilt verlaten dan typ je **HaZe!afmelden** in deze chat.")
+            .setColor("#79ff00");
+
+        return message.channel.send(botEmbed);
+
+    }
+
+    if(command === `${prefix}afmelden`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("We zullen binnen de 24 uur je uit de clan doen. \nJe krijgt een bericht als je de clan hebt verlaten.")
+            .setColor("#79ff00");
+
+        return message.channel.send(botEmbed);
+
+    }
+
 });
