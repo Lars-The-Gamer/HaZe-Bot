@@ -160,6 +160,16 @@ bot.on("message", async message => {
 
     }
 
+    if(command === `${prefix}maintenance`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("**ONDERHOUD 5/12/2019** \n\nOp 5/12/2019 16:00 t.e.m. 21:00 is er onderhoud op Discord \nDat wil zeggen dat je tussen de bovenstaande datum en tijd Discord niet kan gebruiken \nSorry voor dit ongemak")
+            .setColor("#79ff00");
+
+        return message.channel.send(botEmbed);
+
+    }
+
     if(command === `${prefix}afmelden`){
 
         var botEmbed = new discord.RichEmbed()
