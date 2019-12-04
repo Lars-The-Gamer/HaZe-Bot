@@ -54,7 +54,7 @@ bot.on("message", async message => {
     if(command === `${prefix}help`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n\n**HaZe!serverinfo** --> Info van de server weergeven \n\n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n\n**HaZe!pokecord --> Uitleg krijgen over hoe pokécord werkt**")
+            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n\n**HaZe!serverinfo** --> Info van de server weergeven \n\n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n\n**HaZe!afmelden** --> Afmelden bij de HaZe clan \n\n**HaZe!pokecord** --> Uitleg krijgen over hoe pokécord werkt \n\n**HaZe!muziek** --> Uitleg krijgen hoe je muziek moet afspelen op Discord")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
@@ -75,6 +75,16 @@ bot.on("message", async message => {
 
         var botEmbed = new discord.RichEmbed()
             .setDescription("**POKÉCORD** \n\n**Wat is het?** \nPokécord is een spel waarmee je pokémons kunt vangen en met pokémons kunt vechten \n\n**Hoe start je? \n**Om te beginnen kies je je starterspokémon (Je starterspokémon is de pokémon waarmee je XP verdient of mee gaat vechten) \nDit doe je door **p!start** te typen en vervolgens **p!pick <naam van pokémon>** te typen \nAls het goed is heb je dan je starterspokémon gekozen \n\n**Vooruitgang** \nAls je je vooruitgang wilt zien bijvoorbeeld welke pokémons je hebt gevangen dan typ je **p!pokemon** \nAls je wil zien wat je starterspokémon is dan typ je **p!info** \n\n**XP verdienen** \nEr zijn twee manieren om XP te krijgen \nDe eerste manier is door gewoon te praten in #🐣pokécord chat met andere mensen \nDe tweede manier is door een gevecht aan te gaan met iemand uit de Discord server dit doe je door **p!duel <@lid>** \nDe winnaar van het gevecht ontvangt dan XP \n\n**Pokémons vangen** \nAls je praat in #🐣pokécord verschijnen ook pokémons die je kunt vangen \nAls dat gebeurt en je wilt er één vangen dan doe je dat met **p!catch <naam van pokémon dat verschijnt>** \nDus wees als eerste van alle leden die de pokémon vangt door te raden welke naam de pokémon heeft \nAls je de pokémon niet als eerste hebt gevangen maar wel iemand anders dan kun je de pokémon niet meer vangen omdat die al gevangen is door iemand anders \nAls je de naam van de pokémon niet weet kun je ook een hint gebruiken door **p!hint** te typen \nAls je een pokémon vangt komt dat bij je vooruitgang te staan \nTyp **p!pokemon** om je vooruitgang te zien \n\n**Starterspokémon aanpassen** \nAls je een andere starterspokémon (Je starterspokémon is de pokémon waarmee je XP verdient of mee gaat vechten) wilt kun je dat doen met **p!select <nummer van pokémon dat in je vooruitgang staat>** \nOm naar vooruitgang te gaan typ je **p!pokemon** \nAls er nog geen pokémons in je vooruitgang staan wilt dat zeggen dat je er nog geen hebt gevangen \nDus je kunt alleen gevangen pokémons als starterspokémon maken")
+            .setColor("#79ff00");
+
+        return message.author.send(botEmbed);
+
+    }
+
+    if(command === `${prefix}muziek`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("**MUZIEK** \n\nAls je muziek wil laten afspelen moet je als eerste verbinding maken met een willekeurige voice chat (Aanbevolen 🎶 Muziek Speler) \nAls je dat hebt gedaan ga je naar #🎵muziek \nDaar kun je een liedje laten afspelen of pauzeren \nTyp **r!play <Titel lied/Link lied>** om het gekozen liedje te laten afspelen \nGebruik **r!pause** om het liedje te pauzeren \nTyp nogmaals **r!pause** om het liedje terug te laten afspelen \nAls je wilt stoppen met muziek te luisteren dan verbreek je de verbinding met de voice chat of je typ **r!disconnect**")
             .setColor("#79ff00");
 
         return message.author.send(botEmbed);
