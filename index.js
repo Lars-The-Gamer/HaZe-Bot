@@ -105,15 +105,15 @@ bot.on("message", async message => {
 
         return message.channel.send(botEmbed);
 
-        if(command === `${prefix}collab`){
+    }
 
-            var botEmbed = new discord.RichEmbed()
-                .setDescription("**SAMENWERKINGEN** \n\n1. Turtle + Trick Shot Map \nIn deze map kun je met maximaal 16 personen in een Turtle Map vechten \nAls de mapmaker ervoor kiest om met snipers te spelen worden jullie automatisch in de Trick Shot Map gestoken \n**Gemaakt door:**Lars Dobbelaere \n**Laatst geüpdated:**16 December 2019")
-                .setColor("#79ff00");
+    if(command === `${prefix}collabs`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("**SAMENWERKINGEN** \n\n1. Turtle + Trick Shot Map \nIn deze map kun je met maximaal 16 personen in een Turtle Map vechten \nAls de mapmaker ervoor kiest om met snipers te spelen worden jullie automatisch in de Trick Shot Map gestoken \n**Gemaakt door:**Lars Dobbelaere \n**Laatst geüpdated:**16 December 2019")
+            .setColor("#79ff00");
     
-            return message.channel.send(botEmbed);
-    
-        }
+        return message.channel.send(botEmbed);
 
     }
 
