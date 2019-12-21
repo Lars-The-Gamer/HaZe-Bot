@@ -54,7 +54,7 @@ bot.on("message", async message => {
     if(command === `${prefix}help`){
 
         var botEmbed = new discord.RichEmbed()
-            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n\n**HaZe!serverinfo** --> Info van de server weergeven \n\n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n\n**HaZe!afmelden** --> Afmelden bij de HaZe clan \n\n**HaZe!pokecord** --> Uitleg krijgen over hoe pokécord werkt \n\n**HaZe!muziek** --> Uitleg krijgen hoe je muziek moet afspelen op Discord")
+            .setDescription("**ALLE COMMANDS** \n\n**HaZe!help** --> Om dit scherm te krijgen met alle commands \n\n**HaZe!serverinfo** --> Info van de server weergeven \n\n**HaZe!leden** --> Zien wie er in de HaZe clan zit \n\n**HaZe!afmelden** --> Afmelden bij de HaZe clan \n\n**HaZe!pokecord** --> Uitleg krijgen over hoe pokécord werkt \n\n**HaZe!muziek** --> Uitleg krijgen hoe je muziek moet afspelen op Discord \n\n**HaZe!collabs** --> Je krijgt alle samenwerkingen te zien met partners (YouTube Creators, Map Makers, ...)")
             .setColor("#79ff00");
 
         return message.channel.send(botEmbed);
