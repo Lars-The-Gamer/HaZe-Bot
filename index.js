@@ -190,4 +190,14 @@ bot.on("message", async message => {
 
     }
 
+    if(command === `${prefix}self-promotion`){
+
+        var botEmbed = new discord.RichEmbed()
+            .setDescription("We hebben bovenstaande berichten verwijderd omdat het zelfpromotie bevat. Bekijk de regels om precies te weten wat je mag en niet mag. Bij langdurige overtreding kan het zijn dat je af de server wordt gesmeten of dat je wordt verbannen.")
+            .setColor("#79ff00");
+
+        return message.channel.send(botEmbed);
+
+    }
+
 });
